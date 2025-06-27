@@ -7,9 +7,13 @@
 @model StudentPortal.Models.AddStudentViewModel
 
 <h1>Add Student</h1>
+<form method="post">
+@* <form method="post" >  //find httppost method *@
+    @* is exactly like saying:
+    <form method="post" action="/Student/AddStudent"> *@
+    @* // Posts to the same URL that loaded this the view BUT WITH POST METHOD *@
 
-<form method="post" >
-
+    
     <div class="mt-3">
         <label>Add Stduent</label>
         <input type="text" class="form-control" placeholder="Enter Student Name" id="studentName" asp-for="Name" />

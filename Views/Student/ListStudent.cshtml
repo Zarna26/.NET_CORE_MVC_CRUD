@@ -10,10 +10,11 @@
 
 
 
-@model List<StudentPortal.Models.Entites.Student>  
+@model List<StudentPortal.Models.Entites.Student>   //automatic tell the view that it will receive a Model Object that is a @Type List<Student>
+   
 <h1>list of studnet</h1>
 
-<table class="table">
+<table class="table-bordered">
     <thead>
         <tr>
             <th>Id</th>
@@ -39,6 +40,9 @@
                           asp-controller="Student"
                           method="post"
                           style="display:inline;">
+
+                            @* <input type="hidden" asp-for="Id" /> *@
+                            @* both can work *@
                         <input type="hidden" name="Id" value="@student.Id" />
                         <button type="submit" class="btn btn-outline-danger">Delete</button>
                     </form>

@@ -137,3 +137,4 @@ G:\Practice\.Net\StudentPortal\obj\Debug\net8.0\refint\StudentPortal.dll
 G:\Practice\.Net\StudentPortal\obj\Debug\net8.0\StudentPortal.pdb
 G:\Practice\.Net\StudentPortal\obj\Debug\net8.0\StudentPortal.genruntimeconfig.cache
 G:\Practice\.Net\StudentPortal\obj\Debug\net8.0\ref\StudentPortal.dll
+G:\Practice\.Net\StudentPortal\obj\Debug\net8.0\StudentPortal.sourcelink.json

@@ -27,6 +27,12 @@ namespace StudentPortal.Controllers
         [HttpPost]
         public async Task<IActionResult> AddStudent(AddStudentViewModel viewModel)
         {
+            //Avoid exposing database fields like Id, CreatedAt, etc.
+            //wich we are not sending from form but it is auto generated
+
+            //Use ViewModel to transfer data from View to Controller and vice versa
+
+            //Object Initializer Syntax in C#
             var student = new Student
             {
                 Name = viewModel.Name,
@@ -34,6 +40,15 @@ namespace StudentPortal.Controllers
                 PhoneNumber = viewModel.PhoneNumber,
                 Subscribe = viewModel.Subscribe
             };
+
+            //equivalent to commented method below
+
+            //Student student = new Student();
+            //student.Name = viewModel.Name;
+            //student.Email = viewModel.Email;
+            //student.PhoneNumber = viewModel.PhoneNumber;
+            //student.Subscribe = viewModel.Subscribe;
+
 
             await _dbContext.Students.AddAsync(student);
             await _dbContext.SaveChangesAsync();
